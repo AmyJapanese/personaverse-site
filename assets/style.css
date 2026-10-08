@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+.personaverse {
+  color-scheme:dark;
+  --pv-bg:#0d1625;
+  --pv-panel:#16243a;
+  --pv-line:#324158;
+  --pv-ink:#f1f5fc;
+  --pv-muted:#b2c0d1;
+  --pv-accent:#eacb85;
+  --pv-max:1100px
+}
+:where(.personaverse) * {
+  box-sizing:border-box
+}
+.personaverse {
+  scroll-behavior:smooth
+}
+.personaverse {
+  margin:0;
+  background:var(--pv-bg);
+  color:var(--pv-ink);
+  font:16px/1.85 'Noto Sans JP',system-ui,sans-serif
+}
+:where(.personaverse) a {
+  color:inherit
+}
+:where(.personaverse) a:focus-visible,
+:where(.personaverse) button:focus-visible {
+  outline:3px solid var(--pv-accent);
+  outline-offset:4px
+}
+:where(.personaverse) .skip {
+  position:absolute;
+  left:-999px;
+  top:10px;
+  z-index:20
+}
+:where(.personaverse) .skip:focus {
+  left:10px;
+  background:#fff;
+  color:#111;
+  padding:8px
+}
+:where(.personaverse) .site-header {
+  position:relative;
+  z-index:3;
+  border-bottom:1px solid var(--pv-line);
+  background:#101b2cf0
+}
+:where(.personaverse) .header-inner {
+  max-width:var(--pv-max);
+  padding:16px 25px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px
+}
+:where(.personaverse) .brand {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font:700 18px/1.15 Outfit,sans-serif;
+  letter-spacing:.13em;
+  text-decoration:none
+}
+:where(.personaverse) .brand small {
+  display:block;
+  font-size:9px;
+  color:var(--pv-muted);
+  letter-spacing:.23em;
+  margin-top:5px
+}
+:where(.personaverse) .brand-mark {
+  width:41px;
+  height:41px;
+  border:1px solid var(--pv-accent);
+  display:grid;
+  place-items:center;
+  color:var(--pv-accent);
+  font-size:24px;
+  position:relative
+}
+:where(.personaverse) .brand-mark span {
+  font-size:9px;
+  position:absolute;
+  right:2px;
+  top:1px
+}
+:where(.personaverse) nav {
+  display:flex;
+  align-items:center;
+  gap:25px
+}
+:where(.personaverse) nav a {
+  font-size:12px;
+  color:#c0cbd9;
+  text-decoration:none;
+  white-space:nowrap
+}
+:where(.personaverse) nav a:hover,
+:where(.personaverse) nav a[aria-current=page] {
+  color:var(--pv-accent)
+}
+:where(.personaverse) .menu-toggle {
+  display:none
+}
+:where(.personaverse) .container {
+  max-width:var(--pv-max);
+  margin:0 auto;
+  padding-left:25px;
+  padding-right:25px
+}
+:where(.personaverse) .hero {
+  min-height:560px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:radial-gradient(circle at 74% 48%,#2c4262 0,#132237 32%,#0d1625 68%)
+}
+:where(.personaverse) .hero-inner {
+  width:min(100%,var(--pv-max));
+  margin:auto;
+  padding:80px 25px;
+  position:relative;
+  z-index:1
+}
+:where(.personaverse) .eyebrow,
+:where(.personaverse) .section-kicker {
+  font:600 12px Outfit,sans-serif;
+  letter-spacing:.24em;
+  color:var(--pv-accent)
+}
+:where(.personaverse) .hero h1 {
+  font:700 clamp(54px,7.7vw,100px)/1.06 Outfit,sans-serif;
+  letter-spacing:-.035em;
+  margin:20px 0 29px
+}
+:where(.personaverse) .hero h1 em {
+  font-style:normal;
+  color:var(--pv-accent)
+}
+:where(.personaverse) .hero-sub {
+  font-size:20px;
+  font-weight:700;
+  margin:0 0 17px
+}
+:where(.personaverse) .hero-desc {
+  max-width:480px;
+  color:var(--pv-muted);
+  font-size:14px
+}
+:where(.personaverse) .hero-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px
+}
+:where(.personaverse) .button {
+  display:inline-block;
+  padding:12px 19px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  border:1px solid var(--pv-accent);
+  border-radius:2px
+}
+:where(.personaverse) .button.primary {
+  background:var(--pv-accent);
+  color:#182438
+}
+:where(.personaverse) .button.outline {
+  color:var(--pv-accent)
+}
+:where(.personaverse) .button:hover {
+  filter:brightness(1.1)
+}
+:where(.personaverse) .hero-art {
+  position:absolute;
+  right:-100px;
+  top:10%;
+  width:620px;
+  height:620px;
+  opacity:.35
+}
+:where(.personaverse) .orbit {
+  position:absolute;
+  border:1px solid #91b2d1;
+  border-radius:50%;
+  inset:12%
+}
+:where(.personaverse) .orbit-two {
+  inset:2%;
+  transform:rotateX(55deg) rotate(-25deg);
+  border-color:var(--pv-accent)
+}
+:where(.personaverse) .orb {
+  font-size:190px;
+  position:absolute;
+  left:33%;
+  top:15%;
+  color:var(--pv-accent)
+}
+:where(.personaverse) .art-text {
+  font:800 90px Outfit;
+  position:absolute;
+  left:18%;
+  top:65%;
+  color:#7b9bbd
+}
+:where(.personaverse) .section {
+  padding-top:80px;
+  padding-bottom:110px
+}
+:where(.personaverse) .section h2 {
+  font-size:31px;
+  margin:8px 0 32px
+}
+:where(.personaverse) .cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+:where(.personaverse) .feature-card {
+  background:var(--pv-panel);
+  border:1px solid var(--pv-line);
+  padding:25px;
+  text-decoration:none;
+  min-height:234px;
+  display:flex;
+  flex-direction:column;
+  transition:transform .15s,border-color .15s
+}
+:where(.personaverse) .feature-card:hover {
+  transform:translateY(-4px);
+  border-color:var(--pv-accent)
+}
+:where(.personaverse) .card-index {
+  font:600 11px Outfit;
+  letter-spacing:.14em;
+  color:var(--pv-accent)
+}
+:where(.personaverse) .feature-card h3 {
+  font-size:19px;
+  margin:17px 0 3px
+}
+:where(.personaverse) .feature-card p {
+  font-size:13px;
+  color:var(--pv-muted);
+  margin:0 0 26px
+}
+:where(.personaverse) .card-link {
+  margin-top:auto;
+  color:var(--pv-accent);
+  font-size:12px
+}
+:where(.personaverse) .page-title {
+  padding-top:70px;
+  padding-bottom:45px;
+  border-bottom:1px solid var(--pv-line)
+}
+:where(.personaverse) .page-title h1 {
+  font:700 clamp(35px,5vw,62px)/1.2 Outfit,'Noto Sans JP',sans-serif;
+  margin:12px 0 22px;
+  letter-spacing:.01em
+}
+:where(.personaverse) .page-title .lead {
+  font-size:16px;
+  color:var(--pv-muted)
+}
+:where(.personaverse) .narrow {
+  max-width:850px
+}
+:where(.personaverse) .prose {
+  padding-top:43px;
+  padding-bottom:100px
+}
+:where(.personaverse) .prose h2 {
+  font-size:23px;
+  margin:50px 0 16px;
+  padding-left:15px;
+  border-left:3px solid var(--pv-accent)
+}
+:where(.personaverse) .prose h2:first-child {
+  margin-top:8px
+}
+:where(.personaverse) .prose h3 {
+  font-size:17px;
+  color:var(--pv-accent);
+  margin:30px 0 10px
+}
+:where(.personaverse) .prose p,
+:where(.personaverse) .prose li {
+  color:#d6e0eb;
+  line-height:2
+}
+:where(.personaverse) .prose li {
+  margin-bottom:7px
+}
+:where(.personaverse) .prose ul {
+  padding-left:1.55em
+}
+:where(.personaverse) .prose a {
+  color:var(--pv-accent)
+}
+:where(.personaverse) .note {
+  margin-top:32px;
+  background:#192c43;
+  border-left:3px solid var(--pv-accent);
+  padding:20px 23px
+}
+:where(.personaverse) .note p {
+  margin-bottom:0
+}
+:where(.personaverse) .subtle {
+  color:var(--pv-muted)!important
+}
+:where(.personaverse) .guideline h2:first-child {
+  display:none
+}
+:where(.personaverse) .site-footer {
+  border-top:1px solid var(--pv-line);
+  background:#0a1220
+}
+:where(.personaverse) .footer-inner {
+  max-width:var(--pv-max);
+  margin:auto;
+  padding:40px 25px;
+  display:flex;
+  justify-content:space-between;
+  gap:30px
+}
+:where(.personaverse) .footer-logo {
+  font:700 19px Outfit;
+  letter-spacing:.18em
+}
+:where(.personaverse) .site-footer p,
+:where(.personaverse) .site-footer small {
+  color:var(--pv-muted);
+  font-size:12px
+}
+:where(.personaverse) .footer-right {
+  text-align:right
+}
+:where(.personaverse) .socials {
+  display:flex;
+  justify-content:flex-end;
+  gap:20px;
+  margin-bottom:15px
+}
+:where(.personaverse) .socials a {
+  font:600 14px Outfit;
+  text-decoration:none;
+  color:var(--pv-accent)
+}
+:where(.personaverse) .socials a[aria-disabled=true] {
+  opacity:.65;
+  cursor:default
+}
+:where(.personaverse) .pending {
+  font:400 11px 'Noto Sans JP'
+}
+@media(max-width:760px){:where(.personaverse) .header-inner {
+  flex-wrap:wrap
+}
+:where(.personaverse) .menu-toggle {
+  display:block;
+  background:none;
+  border:1px solid var(--pv-line);
+  color:var(--pv-ink);
+  padding:7px 10px;
+  font:inherit;
+  font-size:12px;
+  cursor:pointer
+}
+:where(.personaverse) nav {
+  display:none;
+  width:100%;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0;
+  padding:7px 0
+}
+:where(.personaverse) nav.open {
+  display:flex
+}
+:where(.personaverse) nav a {
+  padding:10px 0;
+  border-top:1px solid var(--pv-line)
+}
+:where(.personaverse) .hero {
+  min-height:510px
+}
+:where(.personaverse) .hero h1 {
+  font-size:clamp(43px,11vw,68px)
+}
+:where(.personaverse) .hero-art {
+  right:-360px;
+  opacity:.18
+}
+:where(.personaverse) .cards {
+  grid-template-columns:1fr
+}
+:where(.personaverse) .feature-card {
+  min-height:175px
+}
+:where(.personaverse) .footer-inner {
+  flex-direction:column
+}
+:where(.personaverse) .footer-right {
+  text-align:left
+}
+:where(.personaverse) .socials {
+  justify-content:flex-start
+}
+:where(.personaverse) .section {
+  padding-top:55px;
+  padding-bottom:65px
+}
+:where(.personaverse) .page-title {
+  padding-top:45px
+}
+:where(.personaverse) .prose {
+  padding-bottom:75px
+}
+
+}
+@media(prefers-reduced-motion:reduce){:where(.personaverse) *,
+:where(.personaverse) *::before,
+:where(.personaverse) *::after {
+  scroll-behavior:auto!important;
+  transition:none!important
+}
+
+}
+
+
+/* Site root and language controls. Every rule stays inside Personaverse. */
+.personaverse { box-sizing: border-box; min-height: 100vh; }
+:where(.personaverse) .header-inner { flex-wrap: wrap; }
+:where(.personaverse) .language-switch { display: flex; gap: 9px; align-items: center; flex-shrink: 0; font-size: 12px; }
+:where(.personaverse) .language-switch a { text-decoration: none; color: var(--pv-muted); padding: 5px 2px; }
+:where(.personaverse) .language-switch a:hover,
+:where(.personaverse) .language-switch a[aria-current=true] { color: var(--pv-accent); text-decoration: underline; text-underline-offset: 4px; }
+:where(.personaverse) .language-switch span { color: var(--pv-line); }
+:where(.personaverse) .hero-desc { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  :where(.personaverse) .header-inner { gap: 12px; }
+  :where(.personaverse) .brand { font-size: 15px; gap: 8px; }
+  :where(.personaverse) .language-switch { order: 2; margin-left: auto; }
+  :where(.personaverse) .menu-toggle { order: 3; }
+  :where(.personaverse) .site-header nav { order: 4; }
+}
